@@ -1,0 +1,22 @@
+---
+ - hosts: remoto
+   gather_facts: True
+   become: yes
+   roles: 
+    - slacko
+    
+   debugger: on_skipped
+
+   vars:
+      
+      gitpath: https://github.com/LeonardoDG2084/iaac_slacko-api
+      ntppath: /etc/
+      path: /opt/slacko-api/
+      env:
+         envlin: export TZ=America/Sao_Paulo
+      secret_db_name: admin
+      secret_db_user: admin
+      secret_db_pass: 1234
+
+
+
